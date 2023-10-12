@@ -4,21 +4,19 @@ class Solution {
         while (index < nums.length) {
             int correctIndex = nums[index] - 1;
 
-            if (nums[index] > 0 && nums[index] < nums.length && nums[index] != nums[correctIndex]) {
+            if (nums[index] > 0 && nums[index] < nums.length &&
+                nums[index] != nums[correctIndex]) {
                 Swap(index, correctIndex, nums);
             } else {
                 index++;
             }
-
         }
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != i + 1) {
 
                 return i + 1;
-
             }
-
         }
         return nums.length + 1;
     }
